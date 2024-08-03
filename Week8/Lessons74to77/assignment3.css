@@ -1,0 +1,29 @@
+* {
+     box-sizing: border-box;
+}
+
+span {
+     width: 50px;
+     height: 50px;
+     margin: 50px auto;
+     background-color: #e4e4f0;
+     border: 5px solid black;
+     border-right-color: transparent;
+     border-radius: 50%;
+     position: relative;
+     display: block;
+     animation-name:rotation ;
+     animation-duration: 1s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+
+
+}
+@keyframes rotation {
+     from {
+          transform: rotate(0turn);
+     }
+     to {
+          transform: rotate(1turn);
+     }
+}

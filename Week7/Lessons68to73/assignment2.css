@@ -1,0 +1,45 @@
+:root {
+     --mainBackgroundColor: #009688;
+}
+
+h1 {
+     position: relative;
+     width: 150px;
+     width: fit-content;
+     padding: 20px;
+     margin: 20px auto;
+     color: white;
+     background-color: var(--mainBackgroundColor);
+}
+h1::before {
+     content: "";
+     position: absolute;
+     background-color: var(--mainBackgroundColor);
+     z-index: -1;
+     width: 100%;
+     height: 100%;
+     transform: skew(22deg);
+     top: 0%;
+     left: -29px;
+ }
+ h1::after {
+     content: "";
+     position: absolute;
+     background-color: white;
+     width: 4%;
+     height: 100%;
+     transform: skew(22deg);
+     top: 0%;
+     left: -11px;
+ }
+
+ /* h1::after {
+     content: "";
+     position: absolute;
+     background-color: var(--mainBackgroundColor);
+     width: 12%;
+     height: 100%;
+     transform: skew(20deg);
+     top: 0%;
+     left: -39px;
+ } */

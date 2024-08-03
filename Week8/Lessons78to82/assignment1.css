@@ -1,0 +1,6 @@
+/* .main.red:not(p)  {
+     color: red;
+} */
+div.main.red {
+     color: red;
+}

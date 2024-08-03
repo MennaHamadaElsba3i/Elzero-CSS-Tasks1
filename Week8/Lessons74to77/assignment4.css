@@ -1,0 +1,178 @@
+* {
+     box-sizing: border-box;
+}
+
+.parent {
+     width: 500px;
+     height: 400px;
+     margin: 20px auto;
+     display: grid;
+     grid-template-columns: repeat(2, 240px);
+     grid-template-rows: auto;
+     gap: 15px 15px;
+}
+
+.e div,
+.l div {
+     background-color: #323234;
+}
+
+.e {
+     display: grid;
+     position: relative;
+     grid-template-columns: repeat(4, 50px);
+     grid-template-rows: repeat(7, 50px);
+}
+
+.one {
+     grid-area: 1 / 1 / 2 / span4;
+}
+
+.two {
+     grid-area: 2 / 1 / span 2 / 2;
+}
+
+.three {
+     grid-area: 4 / 1 / 5 / span4;
+}
+
+.four {
+     grid-area: 5 / 1 / 7 / 2;
+}
+
+.five {
+     grid-area: 7 / 1 / 8 / span4;
+}
+
+.l {
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(4, 50px);
+     grid-template-rows: repeat(7, 50px);
+}
+
+.l-one {
+     grid-area: 1/ 1/ 8 /2;
+}
+
+.l-two {
+     grid-area: 7/ 2/ 8 /span4;
+}
+
+.e::before {
+     position: absolute;
+     content: "";
+     width: 40px;
+     height: 40px;
+     background-color: #fea604;
+     top: 1%;
+     left: 82%;
+     animation-name: e-track;
+     animation-duration: 6s;
+     animation-timing-function: linear;
+}
+
+@keyframes e-track {
+     0% {
+          top: 1%;
+          left: 82%;
+     }
+
+     10% {
+          top: 1%;
+          left: 3%;
+     }
+
+     20% {
+          top: 38%;
+          left: 3%;
+     }
+
+     30% {
+          top: 38%;
+          left: 82%;
+     }
+
+     40% {
+          top: 38%;
+          left: 3%;
+     }
+
+     50% {
+          top: 75%;
+          left: 3%;
+     }
+
+     60% {
+          top: 75%;
+          left: 82%;
+     }
+
+     70% {
+          top: 75%;
+          left: 3%;
+     }
+
+     80% {
+          top: 1%;
+          left: 3%;
+     }
+
+     100% {
+
+          top: 1%;
+          left: 82%;
+
+     }
+}
+
+.l::before {
+     position: absolute;
+     content: "";
+     width: 40px;
+     height: 40px;
+     background-color: #fea604;
+     top: 76%;
+     left: 79%;
+     opacity: 0;
+     animation-name: l-track;
+     animation-duration: 3s;
+     animation-delay: 6s;
+     animation-timing-function: linear;
+}
+
+
+@keyframes l-track {
+     0% {
+          top: 76%;
+          left: 82%;
+          opacity: 0;
+     }
+
+     10% {
+          top: 76%;
+          left: 82%;
+          opacity: 1;
+     }
+
+     30% {
+          opacity: 1;
+          top: 76%;
+          left: 3%;
+     }
+
+     90% {
+          top: 1%;
+          left: 3%;
+          opacity: 1;
+
+     }
+
+     100% {
+          top: 1%;
+          left: 3%;
+          opacity: 0;
+
+     }
+
+}
